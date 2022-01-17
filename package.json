@@ -5,7 +5,7 @@
   "author": "donatas M <donatasmart@gmail.com>",
   "description": "herp derp",
   "dependencies": {
-    "hubot": "^2.16.0",
+    "hubot": "^3.1.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.1",
     "hubot-google-translate": "^0.2.0",
@@ -17,9 +17,15 @@
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^3.3.0"
+    "hubot-slack": "^3.3.0",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
